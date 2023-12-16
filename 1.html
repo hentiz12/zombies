@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 250px;
+            width: 220px;
+            background-color: gray;
+            margin-top: 20px;
+        }
+
+        .body {
+            background-image: url(game.png);
+            height: 1000px; 
+            background-size: 100% 100%;
+        }
+
+        .shooter {
+            width: 80px; 
+            position: absolute;
+            left: 600px;
+        }
+
+        .zombies {
+            width: 80px; 
+            position: absolute;
+            transition: 1s;
+            left: 1500px;
+        }
+    </style>
+</head>
+<body class="body">
+   <div class="" style="">
+        
+        <h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+        <!--ГОРОХИ-->
+        <img class="shooter" src="peashooter.png"  style="top: 250px; ">        
+        <img class="shooter" src="peashooter.png"  style="top: 350px; ">    
+        <img class="shooter" src="peashooter.png"  style="top: 450px; ">    
+        <img class="shooter" src="peashooter.png"  style="top: 550px; ">
+        <img class="shooter" src="peashooter.png"  style="top: 650px; ">
+        <img class="shooter" src="peashooter.png"  style="top: 750px; ">
+
+
+        <!--ЗОМБИ-->
+        <img class="zombies" src="zombie1.png" style="top: 220px">
+        <img class="zombies" src="zombie2.png" style="top: 320px">
+        <img class="zombies" src="zombie2.png" style="top: 420px">
+        <img class="zombies" src="zombie4.png" style="top: 520px">
+        <img class="zombies" src="zombie4.png" style="top: 620px">
+        <img class="zombies" src="zombie4.png" style="top: 720px">
+    </div>
+
+    <div class="box">
+        <h1>Собери максимальное количество очков</h1>
+
+
+
+        <h1>Очки: <span class="pointer">0</span> </h1>
+        
+    </div>
+        
+
+    <script>
+    let mydivs = document.querySelectorAll(".box")
+
+    let myshooter = document.querySelectorAll(".shooter")
+
+    let myzombies = document.querySelectorAll(".zombies")
+    
+
+
+    let score = 0;
+
+    let zombiesleft = 1500;
+    let zombiesleft1 = 1500;
+    let zombiesleft2 = 1500;
+    let zombiesleft3 = 1500;
+    let zombiesleft4 = 1500;
+    let zombiesleft5 = 1500;
+
+
+
+
+
+
+
+
+
+
+    myzombies[0].onclick = function() {
+        zombiesleft = zombiesleft - 100;
+        myzombies[0].style.left = zombiesleft + "px"
+        
+        if (zombiesleft<=600) {
+            alert("Ты дошел")
+            myshooter[0].style.display = "none"
+             score = score + 1;
+                 document.querySelector(".pointer").innerHTML = score;
+
+          } 
+    }
+    myzombies[1].onclick = function() {
+        zombiesleft1 = zombiesleft1 - 100;
+        myzombies[1].style.left = zombiesleft1 + "px"
+        
+        if (zombiesleft1<=600) {
+            alert("Ты дошел")
+            myshooter[1].style.display = "none"
+               score = score + 1;
+            document.querySelector(".pointer").innerHTML = score;
+        }
+    }
+    myzombies[2].onclick = function() {
+        zombiesleft2 = zombiesleft2 - 100;
+        myzombies[2].style.left = zombiesleft2 + "px"
+        
+        if (zombiesleft2<=600) {
+            alert("Ты дошел")
+            myshooter[2].style.display = "none"
+            score = score + 1;
+                 document.querySelector(".pointer").innerHTML = score;
+        }
+
+    }
+    myzombies[3].onclick = function() {
+        zombiesleft3 = zombiesleft3 - 100;
+        myzombies[3].style.left = zombiesleft3 + "px"
+        
+        if (zombiesleft3<=600) {
+            alert("Ты дошел")
+            myshooter[3].style.display = "none"
+              score = score + 1;
+            document.querySelector(".pointer").innerHTML = score;
+        }
+    }
+    myzombies[4].onclick = function() {
+        zombiesleft4 = zombiesleft4 - 100;
+        myzombies[4].style.left = zombiesleft4 + "px"
+        
+        if (zombiesleft4<=600) {
+            alert("Ты дошел")
+            myshooter[4].style.display = "none"
+            score = score + 1;
+            document.querySelector(".pointer").innerHTML = score;
+        }
+    }
+    myzombies[5].onclick = function() {
+        zombiesleft5 = zombiesleft5 - 100;
+        myzombies[5].style.left = zombiesleft5 + "px"
+       
+        if (zombiesleft5<=600) {
+            alert("Ты дошел")
+            myshooter[5].style.display = "none"
+             score = score + 1;
+            document.querySelector(".pointer").innerHTML = score;
+        }
+    }
+    </script>
+</body>
+</html>
